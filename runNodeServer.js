@@ -2,12 +2,12 @@ var lutronpro = require('lutronpro');
 
 
 //Enter your Bridge IP Addresses
-var SMARTBRIDGE_IP = ['192.168.1.44'];
-var SMARTTHINGS_IP = '192.168.1.2';
+var SMARTBRIDGE_IP = [process.env.SMARTBRIDGE_IP];
+var SMARTTHINGS_IP = process.env.SMARTTHINGS_IP;
 
 //Please entery your Lutron Login Info...this simply allows the app to login and fetch the appropriate access codes and certificates automatically. It is not saved or shared anywhere than in this file.
-var USER = 'YOUR EMAIL HERE';
-var PW = 'YOUR PASSWORD HERE';
+var USER = process.env.LUTRON_USER;
+var PW = process.env.LUTRON_PASS;
 
 
 var shortPressTime = 300;  //Time (in ms) to hold button to trigger a held event vs a single press
